@@ -8,7 +8,7 @@ router.post('/', withAuth, withRecaptcha, async (req, res) => {
   try {
    
     if (req.body.comment_text === "") {
-      res.status(400).json({message: "Missing comment."})
+      res.status(400).json({message: "Please enter the comment."})
       return;
     }
     const commentData = await Comment.create({
@@ -17,7 +17,7 @@ router.post('/', withAuth, withRecaptcha, async (req, res) => {
       user_id: req.session.user_id
     })
     console.log("commentData: ",commentData )
-    res.status(200).json({message: "Comment Created"})
+    res.status(200).json({message: "Post Successfully Created"})
       
    } catch (error) {
     console.log(error);
