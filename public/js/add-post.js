@@ -11,7 +11,7 @@ async function newFormHandler(event) {
 
   try {
     grecaptcha.ready( async function() {
-      grecaptcha.execute('6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe', {action: 'submit'})
+      grecaptcha.execute('6LfGds4fAAAAAMkLeNvizoDylbBPZbYGLuBgOOS7', {action: 'submit'})
       .then( async function(token) {
         event.preventDefault();
         const response = await fetch(`/api/posts`, {

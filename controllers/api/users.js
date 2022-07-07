@@ -42,7 +42,6 @@ router.post('/', withRecaptcha, async (req, res) => {
   }
 });
 
-
 router.post('/login', async (req, res) => {
   console.log(`${req.method}: ${req.baseUrl}`);
   try {

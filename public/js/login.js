@@ -35,7 +35,7 @@ async function signupFormHandler(event) {
 
   try {
     grecaptcha.ready( async function() {
-      grecaptcha.execute('6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe', {action: 'submit'})
+      grecaptcha.execute('6LfGds4fAAAAAMkLeNvizoDylbBPZbYGLuBgOOS7', {action: 'submit'})
       .then( async function(token) {
         event.preventDefault();
         if (username && email && password) {
@@ -58,7 +58,7 @@ async function signupFormHandler(event) {
               location.reload();
             }
           } else {
-            document.getElementById('loginError').innerText = 'Sign up failed. Please check username, email, or password length.';
+            document.getElementById('loginError').innerText = 'Unable to sign up, Please check username, email, or password length.';
           }
         }
 
@@ -66,7 +66,7 @@ async function signupFormHandler(event) {
   });
   } catch (error) {
     console.log(error)
-    document.getElementById('loginError').innerText = 'Sign up failed. Please check username, email, or password length.';
+    document.getElementById('loginError').innerText = 'Unable to sign up, Please check username, email, or password length.';
   }
 
 }

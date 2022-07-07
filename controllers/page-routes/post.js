@@ -10,7 +10,6 @@ router.get('/create', withAuth, async (req, res) => {
 
 router.get('/view/:id', withAuth, async (req, res) => {
 
-
   try {
     const postData = await Post.findOne({
       where: {
@@ -57,6 +56,7 @@ router.get('/view/:id', withAuth, async (req, res) => {
       data.user_id = user_id;
       data.created_at = created_at;
       data.comment_text = comment_text;
+      
       return data;
     })
 
@@ -68,7 +68,6 @@ router.get('/view/:id', withAuth, async (req, res) => {
     postInfo.comments = comments;
     postInfo.username = username;
 
-    
 
     res.render('viewPost', {
       postInfo: postInfo,

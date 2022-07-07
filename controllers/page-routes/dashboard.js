@@ -33,7 +33,7 @@ router.get('/', withAuth, async (req, res) => {
       ]
     })
 
-  
+
 
     const posts = postData.map((post) => {
       let data = {}
