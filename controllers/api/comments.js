@@ -6,7 +6,7 @@ const {withAuth, withRecaptcha} = require('../../utils/auth');
 router.post('/', withAuth, withRecaptcha, async (req, res) => {
   console.log(`${req.method}: ${req.baseUrl}`);
   try {
-   
+
     if (req.body.comment_text === "") {
       res.status(400).json({message: "Please enter the comment."})
       return;

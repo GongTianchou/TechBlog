@@ -1,6 +1,7 @@
 const axios = require('axios');
 
 const withAuth = (req, res, next) => {
+  // Checking for session if logged in, else go to login.
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
@@ -8,6 +9,7 @@ const withAuth = (req, res, next) => {
   }
 };
 
+// async function withRecaptcha(req, res, next) {
 const withRecaptcha = async (req, res, next) => {
   const { token } = req.body;
 
