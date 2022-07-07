@@ -27,6 +27,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ## deployed application
 
+https://techblog0531.herokuapp.com/
 
 ## Contributor
 
